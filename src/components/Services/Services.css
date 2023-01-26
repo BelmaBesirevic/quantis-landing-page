@@ -41,5 +41,36 @@
 
 .item-desc {
   font-weight: 300;
-  font-size: 15px;
+  font-size: 0.9rem;
+font-size: clamp(0.9rem, 0.85rem + 0.24vw, 1rem);
+}
+
+
+@media only screen and (max-width: 590px) {
+  
+
+  .services {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding: 20px 5px;
+    width: 100%;
+  }
+
+  .section-heading {
+    line-height: 1.3rem;
+  }
+
+  .services-items {
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .item-icon {
+    font-size: 30px;
+  }
+  .item-heading {
+   
+    margin: 10px 0px;
+  }
 }

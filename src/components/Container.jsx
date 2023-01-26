@@ -1,11 +1,10 @@
 const Container = ({ children }) => {
   return (
-    <div
+    <div id="main-container"
       style={{
         maxWidth: '1200px',
         margin: '0 auto',
         height: 'inherit',
-        padding: '0px 20px',
       }}
     >
       {children}

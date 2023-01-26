@@ -14,5 +14,16 @@
 }
 
 .brand-logo {
-  height: 64px;
+  width: 10%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
+
+@media only screen and (max-width: 590px) {
+  .brands-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+ }
