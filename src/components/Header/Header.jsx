@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = () => {
   const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 890px)').matches
+    window.matchMedia('(min-width: 890px)').matches
   )
   console.log(matches)
 
@@ -20,7 +20,7 @@ const Header = () => {
         <div className='navbar'>
           <div className='logo'>
             <img
-              src={matches ? 'logo-full.svg' : 'logo-q.svg'}
+              src={matches ? '/logo-full.svg' : '/logo-q.svg'}
               alt='quantis logo'
             />
             <span className='logo-tagline'>Insight-driven decisions</span>
