@@ -1,17 +1,25 @@
 import { useEffect, useState } from 'react'
 import Container from '../Container'
+import { AiOutlineMenu } from 'react-icons/ai'
 import './Header.css'
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const [matches, setMatches] = useState(
-    window.matchMedia('(min-width: 890px)').matches
+    window.matchMedia('(min-width: 920px)').matches
   )
-  console.log(matches)
 
   useEffect(() => {
     window
-      .matchMedia('(min-width: 890px)')
+      .matchMedia('(min-width: 920px)')
       .addEventListener('change', (e) => setMatches(e.matches))
+  }, [])
+
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 590px)')
+    setIsMobile(query.matches)
+    query.addEventListener('change', (e) => setIsMobile(e.matches))
   }, [])
 
   return (
@@ -25,7 +33,11 @@ const Header = () => {
             />
             <span className='logo-tagline'>Insight-driven decisions</span>
           </div>
-          <nav id={matches ? 'clipped' : ''} className='navlinks'>
+          {isMobile && <AiOutlineMenu onClick={() => setIsOpen(!isOpen)} style={{fontSize: "30px", margin: "30px"}}/>}
+          <nav
+            id={matches ? 'clipped' : ''}
+            className={`navlinks ${isOpen ? 'open' : 'close'}`}
+          >
             <li className='navlink'>
               <a href='#about'>About</a>
             </li>

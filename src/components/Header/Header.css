@@ -50,9 +50,46 @@
   gap: 15px;
 }
 
+@media only screen and (max-width: 590px) {
+  .navlinks {
+    padding: 20px 50px;
+    background-color: #27e9b7;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+  }
+}
+
+.navlinks.slide-in-right {
+  animation: slide-in-right 0.5s ease-in;
+}
+
+.navlinks.open {
+  display: flex;
+}
+
+
+.navlinks.closed {
+  /* styles for when the nav is closed */
+  right: -100%;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .navlink a {
   font-weight: 600;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .navlink:last-child {
