@@ -28,12 +28,12 @@ const Header = () => {
         <div className='navbar'>
           <div className='logo'>
             <img
-              src={matches ? '/logo-full.svg' : '/logo-q.svg'}
+              src={isMobile ? '/logo-full.svg' : '/logo-q.svg'}
               alt='quantis logo'
             />
             <span className='logo-tagline'>Insight-driven decisions</span>
           </div>
-          {isMobile && <AiOutlineMenu onClick={() => setIsOpen(!isOpen)} style={{fontSize: "30px", margin: "30px"}}/>}
+          {isMobile && <AiOutlineMenu onClick={() => setIsOpen(!isOpen)} style={{fontSize: "30px", margin: "30px"}} className="menu-icon"/>}
           <nav
             id={matches ? 'clipped' : ''}
             className={`navlinks ${isOpen ? 'open' : 'close'}`}

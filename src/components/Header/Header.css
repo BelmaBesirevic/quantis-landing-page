@@ -1,7 +1,7 @@
 .header {
   height: 100px;
   width: 100vw;
-  background-color: #27e9b7;
+  background-color: #2ae5b6;
 }
 
 .navbar {
@@ -38,7 +38,12 @@
 }
 
 .logo img {
-  height: 40px;
+  max-width: auto;
+  max-height: 40px;
+}
+
+.menu-icon {
+  max-height: auto;
 }
 
 .navlinks {
@@ -53,7 +58,7 @@
 @media only screen and (max-width: 590px) {
   .navlinks {
     padding: 20px 50px;
-    background-color: #27e9b7;
+    background-color: #2ae5b6;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -72,19 +77,9 @@
   display: flex;
 }
 
-
 .navlinks.closed {
   /* styles for when the nav is closed */
   right: -100%;
-}
-
-@keyframes slide-in-right {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
 }
 
 .navlink a {
@@ -95,14 +90,21 @@
 .navlink:last-child {
   width: 90px;
   height: 36px;
-  background: #7006a3;
-  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid #7006a3;
 }
 
 .navlink:last-child a {
-  font-weight: 600;
+  display: inline-block;
+  font-weight: 500;
+  color: #7006a3;
+  text-align: center;
+  padding: 5px 10px;
 }
 
+.navlink:last-child a:hover {
+  color: #fff;
+  background-color: #7006a3;
+}

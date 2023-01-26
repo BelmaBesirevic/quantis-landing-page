@@ -2,10 +2,11 @@
   padding: 0px 10px;
   max-width: 900px;
   height: 450px;
-  margin: 0px auto;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color:#E5E8B6;
 }
 
 .slides {
@@ -66,12 +67,12 @@
 }
 
 .next {
-  bottom: 20px;
+  bottom: 30px;
   right: 15%;
 }
 
 .prev {
-  bottom: 20px;
+  bottom: 30px;
   left: 15%;
 }
 
