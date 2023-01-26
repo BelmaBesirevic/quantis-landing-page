@@ -46,30 +46,32 @@ export default function Testimonials() {
   }
 
   return (
-    <div className='container-slider'>
-      <div className='slides'>
-        <div className='slides-heading'>
-          <FaQuoteLeft className='quotes-icon' />
-          <h3 className='section-heading'>Real Stories Real Results</h3>
+    <section id='testimonials'>
+      <div className='container-slider'>
+        <div className='slides'>
+          <div className='slides-heading'>
+            <FaQuoteLeft className='quotes-icon' />
+            <h3 className='section-heading'>Real Stories Real Results</h3>
+          </div>
+          {dataSlider.map((obj, index) => {
+            return (
+              <div
+                key={index}
+                className={
+                  slideIndex === index + 1 ? 'slide active-anim' : 'slide'
+                }
+              >
+                <p className='testimonial-text'>{obj.text}</p>
+                <p className='testimonial-author'>{obj.author}</p>
+              </div>
+            )
+          })}
         </div>
-        {dataSlider.map((obj, index) => {
-          return (
-            <div
-              key={index}
-              className={
-                slideIndex === index + 1 ? 'slide active-anim' : 'slide'
-              }
-            >
-              <p className='testimonial-text'>{obj.text}</p>
-              <p className='testimonial-author'>{obj.author}</p>
-            </div>
-          )
-        })}
+        <div className='controls'>
+          <BtnSlider moveSlide={nextSlide} direction={'next'} />
+          <BtnSlider moveSlide={prevSlide} direction={'prev'} />
+        </div>
       </div>
-      <div className='controls'>
-        <BtnSlider moveSlide={nextSlide} direction={'next'} />
-        <BtnSlider moveSlide={prevSlide} direction={'prev'} />
-      </div>
-    </div>
+    </section>
   )
 }
