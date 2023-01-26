@@ -11,7 +11,7 @@ const Header = () => {
   useEffect(() => {
     window
       .matchMedia('(min-width: 890px)')
-      .addEventListener('change', (e) => setMatches(e.matches))
+      .addEventListener('resize', (e) => setMatches(e.matches))
   }, [])
 
   return (
@@ -20,7 +20,7 @@ const Header = () => {
         <div className='navbar'>
           <div className='logo'>
             <img
-              src={matches ? '/logo-full.svg' : '/logo-q.svg'}
+              src={matches ? 'logo-full.svg' : 'logo-q.svg'}
               alt='quantis logo'
             />
             <span className='logo-tagline'>Insight-driven decisions</span>
