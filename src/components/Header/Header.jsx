@@ -11,7 +11,7 @@ const Header = () => {
   useEffect(() => {
     window
       .matchMedia('(min-width: 890px)')
-      .addEventListener('resize', (e) => setMatches(e.matches))
+      .addEventListener('change', (e) => setMatches(e.matches))
   }, [])
 
   return (
