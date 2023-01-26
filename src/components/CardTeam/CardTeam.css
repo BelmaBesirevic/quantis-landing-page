@@ -1,0 +1,40 @@
+.card-team {
+  padding: 10px;
+  flex: 1;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.profile::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: rgb(0, 255, 162);
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: 94px;
+  display: inline-block;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 100px;
+  z-index: 3;
+}
+
+.team-name, .team-position {
+  text-align: center;
+}
+
+.team-desc {
+  line-height: 1.5;
+}

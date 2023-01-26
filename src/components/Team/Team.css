@@ -1,0 +1,8 @@
+.team {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 100px;
+  gap: 10px;
+  flex-wrap: wrap;
+}

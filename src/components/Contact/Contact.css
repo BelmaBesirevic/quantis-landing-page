@@ -1,0 +1,173 @@
+.contact {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.contact-left {
+  flex: 1;
+  background-color: #51aeb6;
+  padding: 30px 40px;
+  color: #fff;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.contact-heading {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.contact-left p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.contact-phone,
+.contact-email,
+.contact-address {
+  display: flex;
+  gap: 10px;
+  font-weight: 300;
+}
+
+.contact-social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.8rem;
+}
+
+.contact-social > * {
+  cursor: pointer;
+}
+
+.contact-right {
+  flex: 2;
+  padding: 30px 10px;
+}
+
+.contact-input-row {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.contact-input-row input,
+textarea {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-input-row input::placeholder {
+  color: #b1b1b1;
+}
+.contact-input-row input:focus {
+  border-bottom-color: rgb(186, 186, 186);
+}
+
+.radio-group {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+  align-items: center;
+}
+
+.radio-group label {
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+}
+
+input[type='radio'] {
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.35em;
+  height: 1.35em;
+  border: 0.05em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(0.04em);
+  display: flex;
+  place-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+input[type='radio']::before {
+  content: '\2714';
+  width: 0.95em;
+  height: 0.95em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  color: #fff;
+
+  
+  /* 2714 */
+}
+
+input[type='radio']:checked::before {
+  transform: scale(1);
+  background-color: purple;
+  height: 100%;
+  width: 100%;
+  
+}
+
+/* input[type='radio']:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+} */
+
+.contact-subject-q {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.contact-message {
+  margin-top: 20px;
+}
+
+.contact-message textarea::placeholder {
+  font-family: sans-serif;
+  color: rgb(172, 171, 171);
+}
+
+.contact-btn {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-btn button {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  width: 160px;
+  height: 46px;
+  background-color: #7848b5;
+  color: #fff;
+  border-radius: 10px;
+}
