@@ -1,8 +1,23 @@
 #team {
   margin-top: 50px;
   width: 100%;
-  display: flex;
   margin-bottom: 100px;
-  gap: 10px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 340px);
+  place-content: center;
+}
+
+@media screen and (max-width: 1390px) {
+  #team {
+    grid-template-columns: repeat(2, 340px);
+    row-gap: 20px;
+
+  }
+}
+@media screen and (max-width: 720px) {
+  #team {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+
+  }
 }

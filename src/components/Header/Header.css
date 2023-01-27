@@ -39,7 +39,7 @@
 
 .logo img {
   max-width: auto;
-  max-height: 30px;
+  max-height: 50px;
 }
 
 .menu-icon {
@@ -67,6 +67,10 @@
     top: 100px;
     right: 0px;
   }
+  .logo img {
+    max-height: 30px;
+  }
+
 }
 
 .navlinks.slide-in-right {

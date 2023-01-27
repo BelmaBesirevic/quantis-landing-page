@@ -3,8 +3,9 @@ import './Team.css'
 
 const Team = () => {
   return (
+    <>
+      <h3 className='section-heading'>Lead by experts, guided to success</h3>
       <section id='team'>
-      <h3 className='section-heading'>Real stories, Real results</h3>
         <CardTeam src='/team/2.jpeg' name='John Smith' position='Team Lead'>
           John is the team lead at Quantis, with over 10 years of experience in
           web analytics and expertise in server-side tracking and Google
@@ -38,6 +39,7 @@ const Team = () => {
           relationships and account management.
         </CardTeam>
       </section>
+    </>
   )
 }
 export default Team

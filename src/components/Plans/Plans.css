@@ -6,9 +6,23 @@
   margin: 90px auto;
 }
 
-@media screen and (max-width: 970px) {
+.plans > :nth-child(2) {
+  transform: translateY(-20px);
+
+}
+
+.plans > :nth-child(2) .card-header {
+  background-color: #8F3985;
+}
+
+@media screen and (max-width: 1115px) {
   .plans {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .plans > :nth-child(2) {
+    transform: none;
   }
 }
 

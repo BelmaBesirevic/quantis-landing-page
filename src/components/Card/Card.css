@@ -1,49 +1,52 @@
 .card {
-  max-width: 350px;
-  border: 0.25px solid #222222;
-  border-radius: 10px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
 }
 
 .card-header {
-  border-radius: 10px 10px 0 0;
+  max-height: 110px;
   width: 100%;
   background: #51aeb6;
-  display: flex;
-  flex-direction: column;
   color: #f4f4f4;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .card-title {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
   line-height: 18px;
 }
 
 .card-price {
   font-weight: 400;
-  font-size: 20px;
+  font-size: clamp(1rem, 1rem + 0.5vw, 1.2rem);
   line-height: 10px;
 }
 
 .price {
-  font-size: 24px;
+  font-size: 1.3rem;
+  font-size: clamp(1.3rem, 1.2rem + 0.5vw, 1.5rem);
 }
 
 .card-body {
-  margin: 30px 35px;
+  padding: 20px 35px;
 }
 
 .card-desc {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 300;
+  font-size: 1rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.8rem + 0.24vw, 1.1rem);
+  line-height: 1.2;
+  color: #333;
 }
 
 .card-desc > * {
@@ -55,7 +58,19 @@
   height: 30.79px;
   border: 1.97872px solid #7006a3;
   color: #7006a3;
-  border-radius: 10px;
   text-align: center;
   margin-top: 20px;
+  background: none;
+}
+
+@media screen and (max-width: 1115px) {
+  .card {
+    width: 580px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .card {
+    max-width: 100%;
+  }
 }

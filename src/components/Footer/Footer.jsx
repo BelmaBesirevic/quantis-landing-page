@@ -6,11 +6,13 @@ const Footer = () => {
     <footer className='footer'>
       <Container>
         <div className="footer-header">
-          <img src="logo.svg" alt="quantis logo" />
+          <img src="logo-full.svg" alt="quantis logo" />
           <div className="footer-newsletter">
             <span>Subscribe to our newsletter & stay updated</span>
+            <div className="footer-input">
             <input type="email" placeholder='Your email' />
             <button>SIGN UP</button>
+            </div>
           </div>
         </div>
         <div className="footer-links">
